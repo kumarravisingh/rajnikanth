@@ -1,0 +1,19 @@
+{
+    "name": "kumarravi/rajnikanth",
+    "description": "Display randome rajnikanth joke on mindit command",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kumar ravi",
+            "email": "hi@kumarravi.me"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "KumarRavi\\Rajnikanth\\": "src/"
+        }
+    }
+}
