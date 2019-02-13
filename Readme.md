@@ -1,7 +1,7 @@
-#Rajnikanth joke on console
+# Rajnikanth joke on console
 Tired of writing code and want some refreshment?
 
-##How to use?
+## How to use?
 composer require kumarravi/rajnikanth
 <br>
 <b>php artisan mindit</b>
