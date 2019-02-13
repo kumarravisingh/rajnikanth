@@ -11,7 +11,7 @@ class DisplayJoke extends Command
      *
      * @var string
      */
-    protected $signature = 'mindit';
+    protected $signature = 'mindit {--l|loop}';
 
     /**
      * The console command description.
@@ -21,12 +21,9 @@ class DisplayJoke extends Command
     protected $description = 'display random rajnikanth joke to user';
 
 
-
     /**
      * Create a new command instance.
      *
-     * @param  DripEmailer  $drip
-     * @return void
      */
     public function __construct()
     {
@@ -40,6 +37,30 @@ class DisplayJoke extends Command
      */
     public function handle()
     {
-        echo 'yenna raskala';
+
+
+      $this->info($this->getJoke());
+
+      $loopJoke = $this->option('loop');
+
+      while ($loopJoke){
+          if ($this->confirm('more?')) {
+              $this->info($this->getJoke());
+          } else{
+              break;
+          }
+      }
+
+    }
+
+    /**
+     * Get one random joke from file and return
+     *
+     * @return \Illuminate\Support\Collection|mixed
+     */
+    private function getJoke(){
+        $jokesPath = __DIR__ ."/jokes.json";
+        $jokes = collect(json_decode(file_get_contents($jokesPath), true));
+        return $jokes->random();
     }
 }
