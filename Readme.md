@@ -1,6 +1,7 @@
-# Rajnikanth joke on console
+# Rajnikanth joke
 Tired of writing code and want some refreshment?
-
+<br>
+inspired by command: <b>php artisan inspire</b>
 ## How to use?
 composer require kumarravi/rajnikanth
 <br>
