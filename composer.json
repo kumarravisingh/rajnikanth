@@ -15,5 +15,12 @@
         "psr-4": {
             "KumarRavi\\Rajnikanth\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KumarRavi\\Rajnikanth\\RajnikanthServiceProvider"
+            ]
+        }
     }
 }

@@ -12,6 +12,8 @@ class RajnikanthServiceProvide extends ServiceProvider
 
     public function register()
     {
-
+        $this->commands([
+            DisplayJoke::class
+        ]);
     }
 }
